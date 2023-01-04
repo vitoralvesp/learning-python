@@ -19,7 +19,7 @@ lastplaced=futeboltuple[-4:]
 alphabeticalorder=sorted(futeboltuple)
 chapecoense=futeboltuple.index('Chapecoense')
 print(f'-- First Placed: {firstplaced}\n-- Last Placed: {lastplaced}\n-- Alphabetical Order: {alphabeticalorder}\n-- Chapecoense Position: {chapecoense+1}')
-'''
+
 #074
 from random import randint
 finaltuple=()
@@ -28,4 +28,17 @@ for i in range(0,5):
     tuple=(randomnumber,)
     finaltuple+=tuple
 print(f'\n-- finaltuple: {finaltuple}\n-- biggestvalue and lowestvalue: {max(finaltuple)}, {min(finaltuple)}')
-        
+'''
+#075
+finaltuple=evennumbers=()
+print('\n')
+for i in range(0,4):
+    number=int(input('type a number: '))
+    tuple=(number,)
+    finaltuple+=tuple
+    if number%2==0:
+        evennumbers+=tuple
+print(f'\n-- finaltuple: {finaltuple}')
+print(f'\n-- how many times does 9 appear: {finaltuple.count(9)}')
+print(f'\n-- index of the first 3 entered: {finaltuple.index(3)}' if 3 in finaltuple else '\n-- number 3 was not entered')
+print(f'\n-- even numbers: {evennumbers}')
