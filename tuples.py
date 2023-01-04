@@ -11,7 +11,7 @@ while True:
         user=int(input('PLEASE, TRY AGAIN! type a number between 0 and 10: '))
     print('\n-- You have typed zero...' if user==0 else f'-- You have typed {tuple[user-1]}...')
     break
-'''
+
 #073
 futeboltuple=('Palmeiras','Internacional','Fluminense','Corinthians','Flamengo','Atlético Paranaense','Atlético Mineiro','Fortaleza','São Paulo','América Fc Saf','Chapecoense')
 firstplaced=futeboltuple[0:5]
@@ -19,3 +19,13 @@ lastplaced=futeboltuple[-4:]
 alphabeticalorder=sorted(futeboltuple)
 chapecoense=futeboltuple.index('Chapecoense')
 print(f'-- First Placed: {firstplaced}\n-- Last Placed: {lastplaced}\n-- Alphabetical Order: {alphabeticalorder}\n-- Chapecoense Position: {chapecoense+1}')
+'''
+#074
+from random import randint
+finaltuple=()
+for i in range(0,5):
+    randomnumber=randint(0,5)
+    tuple=(randomnumber,)
+    finaltuple+=tuple
+print(f'\n-- finaltuple: {finaltuple}\n-- biggestvalue and lowestvalue: {max(finaltuple)}, {min(finaltuple)}')
+        
