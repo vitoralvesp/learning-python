@@ -42,7 +42,7 @@ print(f'\n-- finaltuple: {finaltuple}')
 print(f'\n-- how many times does 9 appear: {finaltuple.count(9)}')
 print(f'\n-- index of the first 3 entered: {finaltuple.index(3)}' if 3 in finaltuple else '\n-- number 3 was not entered')
 print(f'\n-- even numbers: {evennumbers}')
-'''
+
 #076
 productstuple=()
 addmore='Y'
@@ -71,3 +71,21 @@ while True:
                 print(f'R${productstuple[i]:>7.2f}')
     print('-'*40)
     break
+'''
+#077
+finaltuple=()
+vogals=('A','E','I','O','U')
+addmore='Y'
+while True:
+    while addmore!='N':
+        word=str(input('\n-- enter a random word: ')).upper()
+        addmore=str(input('-- do you want add more [y/n]? ')).upper().strip()[0]
+        tuple=(word,)
+        finaltuple+=tuple
+    break
+print('\n')
+for word in finaltuple:
+    print(f'> "{word}" have ',end='')
+    for letter in word:
+        if letter in vogals:
+            print(letter)
