@@ -2,7 +2,7 @@
 # structure:
 lunch=('hamburguer','juice','pizza','pudim')
 
-'''#072
+#072
 tuple=('one','two','three','four','five','six','seven','eight','nine','ten')
 user=int(input('type a number between 0 and 10: '))
 i=0
@@ -71,7 +71,7 @@ while True:
                 print(f'R${productstuple[i]:>7.2f}')
     print('-'*40)
     break
-'''
+
 #077
 finaltuple=()
 vogals=('A','E','I','O','U')
