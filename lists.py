@@ -1,5 +1,5 @@
 # obs: lists are mutable
-lunch=['hamburguer','fries','coca cola']
+'''lunch=['hamburguer','fries','coca cola']
 lunch.append('ice cream') #add ice cream to the end (length now is 4)
 lunch.insert(0,'anything else') #add anything else in the 0 position without removing hamburguer (length now is 5)
 lunch.pop(2) #remove fries
@@ -25,5 +25,23 @@ for i in range(0,4):
         if numbers[i]<lowernumber:
             lowernumber=numbers[i]
 print(f'\n> List: {numbers}\n> Higher Number: {highernumber} (INDEX {numbers.index(highernumber)})\n> Lower Number: {lowernumber} (INDEX {numbers.index(lowernumber)})')
+'''
+#079
+numbers=[0]
+addmore='Y'
+i=0
+while True:
+    while addmore!='N':
+        number=int(input('\n>> type a number: '))
+        while number==numbers[i]:
+            number=int(input('>> PLEASE DONT REPEAT THE NUMBERS! try again with another number: '))
+        numbers.append(number)
+        i+=1
+        addmore=str(input('>> do you want to continue [y/n]: ')).upper().strip()[0]
+    break
+numbers.remove(0)
+sortedlist=numbers[:]
+sortedlist.sort()
+print(f'\n-->> List Created: {numbers}\n-->> Sorted List: {sortedlist}')
 
-    
+
