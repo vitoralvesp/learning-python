@@ -43,7 +43,7 @@ numbers.remove(0)
 sortedlist=numbers[:]
 sortedlist.sort()
 print(f'\n-->> List Created: {numbers}\n-->> Sorted List: {sortedlist}')
-'''
+
 #080
 list=[]
 for i in range(0,5):
@@ -58,3 +58,11 @@ for i in range(0,5):
                 break
             index+=1
 print(f'\n--> List: {list}')
+'''
+#081
+list=[]
+addmore='Y'
+while addmore!='N':
+    number=int(input('\n> type a number: '))
+    list.append(number)
+    addmore=str(input('> do you want to add more [y/n]: ')).upper().strip()[0]
