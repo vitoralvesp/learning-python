@@ -25,7 +25,7 @@ for i in range(0,4):
         if numbers[i]<lowernumber:
             lowernumber=numbers[i]
 print(f'\n> List: {numbers}\n> Higher Number: {highernumber} (INDEX {numbers.index(highernumber)})\n> Lower Number: {lowernumber} (INDEX {numbers.index(lowernumber)})')
-'''
+
 #079
 numbers=[0]
 addmore='Y'
@@ -43,5 +43,18 @@ numbers.remove(0)
 sortedlist=numbers[:]
 sortedlist.sort()
 print(f'\n-->> List Created: {numbers}\n-->> Sorted List: {sortedlist}')
-
-
+'''
+#080
+list=[]
+for i in range(0,5):
+    number=int(input(f'>> enter the {i+1}º value: '))
+    if i==0 or number>list[-1]:
+        list.append(number)
+    else:
+        index=0
+        while index<len(list):
+            if number<=list[index]:
+                list.insert(index,number)
+                break
+            index+=1
+print(f'\n--> List: {list}')
