@@ -61,8 +61,21 @@ print(f'\n--> List: {list}')
 '''
 #081
 list=[]
-addmore='Y'
-while addmore!='N':
-    number=int(input('\n> type a number: '))
-    list.append(number)
+while True:
+    list.append(int(input('\n> type a number: ')))
     addmore=str(input('> do you want to add more [y/n]: ')).upper().strip()[0]
+    if addmore=='N':
+        break
+sortedlist=list[:]
+descendinglist=list[:]
+sortedlist.sort()
+descendinglist.sort(reverse=True)
+print(f'\n--> List: {list}\n--> Sorted List: {sortedlist}\n--> Descending List: {descendinglist}\n--> Number of elements inserted: {len(list)}')
+if 5 in list:
+    i=0
+    for number in list:
+        if number==5:
+            i+=1
+    print(f'--> 5: True, {i} occurences')
+else:
+    print('--> 5 is not in the list')
