@@ -58,7 +58,7 @@ for i in range(0,5):
                 break
             index+=1
 print(f'\n--> List: {list}')
-'''
+
 #081
 list=[]
 while True:
@@ -79,3 +79,28 @@ if 5 in list:
     print(f'--> 5: True, {i} occurences')
 else:
     print('--> 5 is not in the list')
+'''
+#082
+list=[]
+pairnumberslist=[]
+evennumberslist=[]
+while True:
+    addmore='Y'
+    i=0
+    while addmore!='N':
+        i+=1
+        list.append(int(input(f'\n> {i}. type a number: ')))
+        addmore=str(input('> do you want to add more [y/n]: ')).upper().strip()[0]
+    print('\n')
+    print(f'='*20)
+    for i in list:
+        if i%2==0:
+            pairnumberslist.append(i)
+            print(f'{i} == PAIR!')
+        else:
+            evennumberslist.append(i)
+            print(f'{i} == EVEN')
+    print(f'='*20)
+    print('\n')
+    break
+print(f'\n--> Full List: {list}\n--> List with PAIRS numbers only: {pairnumberslist}\n--> List with EVEN numbers only: {evennumberslist}')
