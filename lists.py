@@ -1,5 +1,5 @@
 # obs: lists are mutable
-'''lunch=['hamburguer','fries','coca cola']
+lunch=['hamburguer','fries','coca cola']
 lunch.append('ice cream') #add ice cream to the end (length now is 4)
 lunch.insert(0,'anything else') #add anything else in the 0 position without removing hamburguer (length now is 5)
 lunch.pop(2) #remove fries
@@ -104,7 +104,7 @@ while True:
     print('\n')
     break
 print(f'\n--> Full List: {list}\n--> List with PAIRS numbers only: {pairnumberslist}\n--> List with EVEN numbers only: {evennumberslist}')
-'''
+
 #083
 sentence=str(input('>> enter a sentence: '))
 print(f'>> Your sentence is correct! {sentence}' if sentence[0]=='(' and sentence[-1]==')' else f'>> Your sentence is incorrect! Please, try again...')
