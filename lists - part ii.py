@@ -26,7 +26,7 @@ while True:
     break
 print('='*30)
 print(f'\n>> Peoples List: {peopleslist}\n>> People Registered: {len(peopleslist)}\n>> Most HEAVIER People: {heavier}\n>> Most LIGHTER People: {lighter}')
-'''
+
 #085
 numbers=list()
 copynumbers=list()
@@ -45,3 +45,14 @@ odd.sort()
 numbers.append(even)
 numbers.append(odd)
 print(f'\n--> the even numbers entered were: {numbers[0]}\n--> the odd numbers entered were: {numbers[1]}')
+'''
+#086
+matrix=[[0,0,0],[0,0,0],[0,0,0]]
+for line in range(0,3):
+    for column in range(0,3):
+        matrix[line][column]=int(input(f'>> enter a value for [{line},{column}]: '))
+print('\n')
+for line in range(0,3):
+    for column in range(0,3):
+        print(f'[{matrix[line][column]:^5}]',end='')
+    print()
