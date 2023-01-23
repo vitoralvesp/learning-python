@@ -1,5 +1,5 @@
 #084
-peopleslist=list()
+'''peopleslist=list()
 lighter=list()
 heavier=list()
 addmore='Y'
@@ -24,4 +24,24 @@ while True:
                 lighter.append(people[0])
                 lighter.append(people[1])
     break
+print('='*30)
 print(f'\n>> Peoples List: {peopleslist}\n>> People Registered: {len(peopleslist)}\n>> Most HEAVIER People: {heavier}\n>> Most LIGHTER People: {lighter}')
+'''
+#085
+numbers=list()
+copynumbers=list()
+even=list()
+odd=list()
+for i in range(0,7):
+    copynumbers.append(int(input(f'> {i+1}. enter a number: ')))
+    for number in copynumbers:
+        if number%2==0:
+            even.append(number)
+        else:
+            odd.append(number)
+    copynumbers.clear()
+even.sort()
+odd.sort()
+numbers.append(even)
+numbers.append(odd)
+print(f'\n--> the even numbers entered were: {numbers[0]}\n--> the odd numbers entered were: {numbers[1]}')
