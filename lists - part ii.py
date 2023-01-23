@@ -45,7 +45,7 @@ odd.sort()
 numbers.append(even)
 numbers.append(odd)
 print(f'\n--> the even numbers entered were: {numbers[0]}\n--> the odd numbers entered were: {numbers[1]}')
-'''
+
 #086
 matrix=[[0,0,0],[0,0,0],[0,0,0]]
 for line in range(0,3):
@@ -56,3 +56,22 @@ for line in range(0,3):
     for column in range(0,3):
         print(f'[{matrix[line][column]:^5}]',end='')
     print()
+'''
+#087
+matrix=[[0,0,0],[0,0,0],[0,0,0]]
+addevens=largest=addcolumns=0
+for line in range(0,3):
+    for column in range(0,3):
+        matrix[line][column]=int(input(f'>> enter a value for [{line},{column}]: '))
+print('\n')
+for line in range(0,3):
+    addcolumns+=matrix[line][2]
+    for column in range(0,3):
+        print(f'[{matrix[line][column]:^5}]',end='')
+        if matrix[line][column]%2==0:
+            addevens+=matrix[line][column]
+        if column==0 or matrix[1][column]>largest:
+            largest=matrix[1][column]
+    print()
+
+print(f'\n-->> the sum of all even values entered: {addevens}\n-->> sum of all numbers in the third column: {addcolumns}\n-->> The largest value in the second line: {largest}')
