@@ -1,5 +1,5 @@
 #084
-'''peopleslist=list()
+peopleslist=list()
 lighter=list()
 heavier=list()
 addmore='Y'
@@ -99,7 +99,7 @@ while totaldejogos<=numerodejogos:
 for i,lista in enumerate(jogos):
     print(f'Jogo {i+1}: {lista}')
     sleep(1)
-'''
+
 #089
 register=list()
 while True:
