@@ -75,7 +75,7 @@ for line in range(0,3):
     print()
 
 print(f'\n-->> the sum of all even values entered: {addevens}\n-->> sum of all numbers in the third column: {addcolumns}\n-->> The largest value in the second line: {largest}')
-'''
+
 #088
 from random import randint
 from time import sleep
@@ -99,3 +99,26 @@ while totaldejogos<=numerodejogos:
 for i,lista in enumerate(jogos):
     print(f'Jogo {i+1}: {lista}')
     sleep(1)
+'''
+#089
+register=list()
+while True:
+    studentname=str(input("\n>> type the student's NAME: ")).upper()
+    studentscore1=float(input(f">> enter the 1º SCORE: "))
+    studentscore2=float(input(f">> enter the 1º SCORE: "))
+    average=(studentscore1+studentscore2)/2
+    register.append([studentname,[studentscore1,studentscore2],average])
+    addmore=str(input('>> do yoy want to add more [y/n]: ')).upper().strip()[0]
+    if addmore=='N':
+        break
+print(f'\n{"No.":<4}{"NAME":<10}{"AVERAGE":>8}')
+print('-'*26)
+for index,student in enumerate(register):
+    print(f'{index:<4}{student[0]:<10}{student[2]:>8.1f}')
+while True:
+    print('-'*26)
+    optional=int(input('>> type an index corresponding to a student and see their grades separately (999 to stop): '))
+    if optional<=len(register)-1:
+        print(f"\n-->>{register[optional][0]}'s score is {register[optional][1]}")
+    if optional==999:
+        break
