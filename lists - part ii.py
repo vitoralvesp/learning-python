@@ -56,7 +56,7 @@ for line in range(0,3):
     for column in range(0,3):
         print(f'[{matrix[line][column]:^5}]',end='')
     print()
-'''
+
 #087
 matrix=[[0,0,0],[0,0,0],[0,0,0]]
 addevens=largest=addcolumns=0
@@ -75,3 +75,27 @@ for line in range(0,3):
     print()
 
 print(f'\n-->> the sum of all even values entered: {addevens}\n-->> sum of all numbers in the third column: {addcolumns}\n-->> The largest value in the second line: {largest}')
+'''
+#088
+from random import randint
+from time import sleep
+lista=[]
+jogos=[]
+numerodejogos=int(input('>> Quantos jogos você quer que eu sorteie? '))
+totaldejogos=1
+while totaldejogos<=numerodejogos:
+    contador=0
+    while True:
+        numerorandom=randint(1,60)
+        if numerorandom not in lista:
+            lista.append(numerorandom)
+            contador+=1
+        if contador>=6:
+            break
+    lista.sort()
+    jogos.append(lista[:])
+    lista.clear()
+    totaldejogos+=1
+for i,lista in enumerate(jogos):
+    print(f'Jogo {i+1}: {lista}')
+    sleep(1)
