@@ -58,7 +58,7 @@ sortedarray.sort(reverse=True)
 for i in range(0,len(array)):
     print(f"{i+1}º place: player{array[i]['player']} with {sortedarray[i]}")
 print('-'*34)
-'''
+
 #092
 dictionary=dict()
 dictionary['nome']=str(input('Nome: '))
@@ -76,7 +76,23 @@ else:
     for keys,values in dictionary.items():
         print(f'{keys} = {values}')
     print('-'*34)
-
+'''
+#093
+jogador={}
+jogador['nome']=str(input('Nome do Jogador: '))
+partidas=int(input(f"Quantas partidas {jogador['nome']} jogou? "))
+gols=[]
+total=0
+for i in range(0,partidas):
+    gols.append(int(input(f'Quantos gols na partida {i}? ')))
+for gol in gols:
+    if gol!=0:
+        total+=gol
+jogador['gols']=gols.copy()
+jogador['total']=total
+print('-'*33)
+print(f'{jogador}')
+print('-'*33)
 
 
 
