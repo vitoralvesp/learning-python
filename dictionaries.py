@@ -40,7 +40,7 @@ else:
     student['situation']='Reproved'
 for key,value in student.items():
     print(f'{key} = {value}')
-'''
+
 #091
 from random import randint
 array=[]
@@ -58,5 +58,27 @@ sortedarray.sort(reverse=True)
 for i in range(0,len(array)):
     print(f"{i+1}º place: player{array[i]['player']} with {sortedarray[i]}")
 print('-'*34)
+'''
+#092
+dictionary=dict()
+dictionary['nome']=str(input('Nome: '))
+dictionary['nascimento']=int(input('Ano de Nascimento: '))
+dictionary['carteiradetrabalho']=int(input('Carteira de Trabalho (0 não tem): '))
+if dictionary['carteiradetrabalho']==0:
+    print('-'*34)
+    for keys,values in dictionary.items():
+        print(f'{keys} = {values}')
+    print('-'*34)
+else:
+    dictionary['anodecontratação']=int(input('Ano de Contratação: '))
+    dictionary['salário']=float(input('Salário: R$'))
+    print('-'*34)
+    for keys,values in dictionary.items():
+        print(f'{keys} = {values}')
+    print('-'*34)
+
+
+
+
 
 
