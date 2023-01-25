@@ -27,7 +27,7 @@ for i in range(0,3):
     estado['uf']=str(input('Unidade Federativa: '))
     estado['sigla']=str(input('Sigla do Estado: '))
     brasil.append(estado.copy())
-'''
+
 #090
 student={}
 student['name']=str(input('Name: ')).capitalize()
@@ -40,6 +40,23 @@ else:
     student['situation']='Reproved'
 for key,value in student.items():
     print(f'{key} = {value}')
-
+'''
+#091
+from random import randint
+array=[]
+for i in range(0,4):
+    dictionary={'player':i,'valuedrawn':randint(0,6)}
+    array.append(dictionary.copy())
+print('-'*34)
+for i in range(0,len(array)):
+    print(f"The value drawn for player{array[i]['player']} was {array[i]['valuedrawn']}")
+print('-'*34)
+sortedarray=[]
+for i in range(0,len(array)):
+    sortedarray.append(array[i]['valuedrawn'])
+sortedarray.sort(reverse=True)
+for i in range(0,len(array)):
+    print(f"{i+1}º place: player{array[i]['player']} with {sortedarray[i]}")
+print('-'*34)
 
 
