@@ -43,20 +43,20 @@ for key,value in student.items():
 
 #091
 from random import randint
-array=[]
+list=[]
 for i in range(0,4):
     dictionary={'player':i,'valuedrawn':randint(0,6)}
-    array.append(dictionary.copy())
+    list.append(dictionary.copy())
 print('-'*34)
-for i in range(0,len(array)):
-    print(f"The value drawn for player{array[i]['player']} was {array[i]['valuedrawn']}")
+for i in range(0,len(list)):
+    print(f"The value drawn for player{list[i]['player']} was {list[i]['valuedrawn']}")
 print('-'*34)
-sortedarray=[]
-for i in range(0,len(array)):
-    sortedarray.append(array[i]['valuedrawn'])
-sortedarray.sort(reverse=True)
-for i in range(0,len(array)):
-    print(f"{i+1}º place: player{array[i]['player']} with {sortedarray[i]}")
+sortedlist=[]
+for i in range(0,len(list)):
+    sortedlist.append(list[i]['valuedrawn'])
+sortedlist.sort(reverse=True)
+for i in range(0,len(list)):
+    print(f"{i+1}º place: player{list[i]['player']} with {sortedlist[i]}")
 print('-'*34)
 
 #092
@@ -76,7 +76,7 @@ else:
     for keys,values in dictionary.items():
         print(f'{keys} = {values}')
     print('-'*34)
-'''
+
 #093
 jogador={}
 jogador['nome']=str(input('Nome do Jogador: '))
@@ -93,8 +93,32 @@ jogador['total']=total
 print('-'*33)
 print(f'{jogador}')
 print('-'*33)
-
-
-
-
-
+'''
+#094
+list=list()
+while True:
+    dictionary={'name':str(input('> name: ')),'age':int(input('> age: ')),'gender':str(input('> gender: '))}
+    list.append(dictionary)
+    print('-'*33)
+    addmore=str(input('> do you want to add more [y/n]? ')).upper().strip()[0]
+    print('-'*33)
+    if addmore=='N':
+        break
+peoplestotal=0
+averageage=agetotal=0
+women=[]
+womentotal=0
+middleaged=[]
+for i in range(0,len(list)):
+    if list[i]['name']:
+        peoplestotal+=1
+    if list[i]['age']:
+        agetotal+=list[i]['age']
+    if list[i]['gender']=='F':
+        women.append(list[i]['name'])
+        womentotal+=1
+    if list[i]['age']>50:
+        middleaged.append(list[i]['name'])
+        middleaged.append(list[i]['age'])
+averageage=agetotal/peoplestotal
+print(f"\nPeople Registered: {peoplestotal}\nPeople's Average Age: {round(averageage)}\nWomen: {women} | Total: {womentotal}\nMiddle-Aged Persons: {middleaged}")
