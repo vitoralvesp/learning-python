@@ -65,7 +65,7 @@ inicio=int(input('Início: '))
 fim=int(input('Fim: '))
 passo=int(input('Passo: '))
 contador(inicio,fim,passo)
-'''
+
 #099
 def maior(*num):
     maior=0
@@ -79,9 +79,26 @@ maior(4,7,0)
 maior(1,2)
 maior(6)
 maior()
-
-
-
+'''
+#100
+from random import randint
+from time import sleep
+def sorteia(numeros):
+    print('Sorteando 5 valores da lista: ',end='')
+    for i in range(0,5):
+        sleep(.5)
+        numeros.append(randint(0,10))
+        print(f'{numeros[i]} ',end='',flush=True)
+    print('PRONTO!')
+    somaPar(numeros)
+def somaPar(numeros):
+    soma=0
+    for num in numeros:
+        if num%2==0:
+            soma+=num
+    print(f'Somando os valores pares de {numeros}, temos {soma}')
+numeros=list()
+sorteia(numeros)
 
 
 
