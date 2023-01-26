@@ -31,7 +31,7 @@ def escreva(texto):
     print('~'*40)
 texto=str(input('> Insira sua mensagem aqui: '))
 escreva(texto)
-'''
+
 #098
 from time import sleep
 def contador(inicio,fim,passo):
@@ -65,3 +65,27 @@ inicio=int(input('Início: '))
 fim=int(input('Fim: '))
 passo=int(input('Passo: '))
 contador(inicio,fim,passo)
+'''
+#099
+def maior(*num):
+    maior=0
+    for i in num:
+        if i>maior:
+            maior=i
+    print('-='*20)
+    print(f'O maior número inserido foi {maior}.')
+maior(2,9,4,5,7,1)
+maior(4,7,0)
+maior(1,2)
+maior(6)
+maior()
+
+
+
+
+
+
+
+
+
+
