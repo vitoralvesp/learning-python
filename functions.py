@@ -1,4 +1,4 @@
-'''def sayMyName():
+def sayMyName():
     print('HEISENBERG!')
 sayMyName() # HEISENBERG!
 
@@ -79,7 +79,7 @@ maior(4,7,0)
 maior(1,2)
 maior(6)
 maior()
-'''
+
 #100
 from random import randint
 from time import sleep
