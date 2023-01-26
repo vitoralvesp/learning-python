@@ -1,4 +1,3 @@
-'''
 people={'name':'Vitor','gender':'male','age':19}
 print(people['name']) # Vitor
 print(people.keys()) # dict_keys(['name', 'gender', 'age'])
@@ -122,7 +121,6 @@ for i in range(0,len(list)):
         middleaged.append(list[i]['age'])
 averageage=agetotal/peoplestotal
 print(f"\nPeople Registered: {peoplestotal}\nPeople's Average Age: {round(averageage)}\nWomen: {women} | Total: {womentotal}\nMiddle-Aged Persons: {middleaged}")
-'''
 #095
 jogadores={}
 jogador=[]
