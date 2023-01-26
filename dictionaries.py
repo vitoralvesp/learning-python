@@ -93,7 +93,7 @@ jogador['total']=total
 print('-'*33)
 print(f'{jogador}')
 print('-'*33)
-'''
+
 #094
 list=list()
 while True:
@@ -122,3 +122,29 @@ for i in range(0,len(list)):
         middleaged.append(list[i]['age'])
 averageage=agetotal/peoplestotal
 print(f"\nPeople Registered: {peoplestotal}\nPeople's Average Age: {round(averageage)}\nWomen: {women} | Total: {womentotal}\nMiddle-Aged Persons: {middleaged}")
+'''
+#095
+jogadores={}
+jogador=[]
+while True:
+    jogadores.clear()
+    jogadores['nome']=str(input('\nNome do Jogador: '))
+    partidas=int(input(f"Quantas partidas {jogadores['nome']} jogou? "))
+    gols=[]
+    total=0
+    for i in range(0,partidas):
+        gols.append(int(input(f'Quantos gols na partida {i}? ')))
+    for gol in gols:
+        if gol!=0:
+            total+=gol
+    jogadores['gols']=gols.copy()
+    jogadores['totaldegols']=total
+    jogador.append(jogadores.copy())
+    addmore=str(input('Você quer adicionar mais um jogador [s/n]? ')).upper().strip()[0]
+    print('-'*33)
+    if addmore=='N':
+        break
+print(f'{jogador}')
+
+
+
