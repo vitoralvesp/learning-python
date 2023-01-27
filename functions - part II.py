@@ -40,7 +40,7 @@ def voto(an):
         return f'Com {idade} anos: VOTO NEGADO!'
 an=int(input('insira o seu ano de nascimento: '))
 print(voto(an))
-'''
+
 #102
 def line():
     print('-'*40)
@@ -59,7 +59,17 @@ def factorial(n,show=False):
     line()
 factorial(5)
 factorial(10)
-
-
-
-
+'''
+#103
+def ficha(nome='<desconhecido>',gols=0):
+    print(f'\nO jogador {nome} fez {gols} gol(s) no campeonato.')
+nome=str(input('Nome do Jogador: '))
+gols=str(input('Gols: '))
+if gols.isnumeric():
+    gols=int(gols)
+else:
+    gols=0
+if nome.strip()=='':
+    ficha(gols=gols)
+else:
+    ficha(nome,gols)
