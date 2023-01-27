@@ -26,7 +26,7 @@ def somar(a=0,b=0,c=0):
     return a+b+c
 soma=somar(1,2,3)
 print(soma) # 6
-'''
+
 #101
 def voto(an):
     from datetime import date
@@ -40,3 +40,26 @@ def voto(an):
         return f'Com {idade} anos: VOTO NEGADO!'
 an=int(input('insira o seu ano de nascimento: '))
 print(voto(an))
+'''
+#102
+def line():
+    print('-'*40)
+def factorial(n,show=False):
+    factorial=1
+    line()
+    for i in range(n,0,-1):
+        factorial*=i
+        if show==True:
+            if i>1:
+                print(f'{i} x ',end='')
+            else:
+                print(f'1 = {factorial}')
+    if show==False:
+        print(factorial)
+    line()
+factorial(5)
+factorial(10)
+
+
+
+
